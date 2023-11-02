@@ -1,0 +1,180 @@
+.container {
+  /* position: fixed; */
+  background: #fff;
+  width: 335px;
+}
+
+.weekContainer {
+  display: flex;
+  flex-direction: row;
+  /* width: 410px; */
+  font-size: 12px;
+}
+
+.weekContainer > div {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currentMonth {
+  font-size: 16px;
+}
+
+.dayContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  width: 100% !important;
+  padding: 2px;
+}
+
+.dayContainer > div,
+.today {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  width: 43px;
+  background: #f4f5f9;
+  color: #8e97b3;
+  border-radius: 6px;
+  margin: 2px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.activeDay:hover {
+  cursor: pointer;
+  transition: all 0.1s;
+  font-size: 16px !important ;
+  border: 2px solid #4b64e8;
+  color: #4b64e8;
+}
+
+.selectedStyle {
+  background: #4b64e8 !important;
+  color: #fff !important;
+  font-size: 18px !important ;
+  transition: font-weight 0.51s;
+}
+
+.tickCircul {
+  position: absolute;
+  transform: translate(21px, -21px);
+  width: 22px;
+  height: 22px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #4b64e8;
+}
+
+.tickCircul::before {
+  content: "";
+  position: absolute;
+  transform: translate(5px, 9px) rotate(45deg);
+  width: 3.7px;
+  height: 2px;
+  background: #fff;
+}
+
+.tickCircul::after {
+  content: "";
+  position: absolute;
+  transform: translate(6px, 8px) rotate(-45deg);
+  width: 9px;
+  height: 2px;
+  background: #fff;
+}
+
+.inactiveDay {
+  background: rgb(249, 240, 242) !important;
+  color: #752f2fb1 !important;
+}
+
+.dayOfAnotheMonth {
+  /* background: #f4f9f4 !important; */
+  background: #f4f5f96c !important;
+  color: #8e97b342 !important;
+  border-radius: 50%;
+}
+
+/* header */
+
+.header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navIcon {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.leftArrow {
+  width: 12px;
+  height: 2px;
+  background: #333;
+  transform: translate(1px, 13px) rotate(45deg);
+}
+
+.leftArrow::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: #333;
+  transform: translate(-5px, -6px) rotate(-90deg);
+}
+
+.rightArrowIcon {
+  transform: rotate(180deg);
+}
+
+/* buttons */
+
+.devider {
+  width: 90%;
+  background: #33333326;
+  height: 1px;
+  margin: 20px;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+.buttonContainer button {
+  cursor: pointer;
+  width: 75px;
+  height: 25px;
+  background: #2d54de;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+}
+
+.unavailable__nextBtn {
+  background: #cfcfcf42 !important;
+  color: #8e97b3 !important;
+  border: 1px solid #8e97b3 !important;
+  cursor: not-allowed !important;
+}
+
+@media (max-width: 409px) {
+  /* .container {
+    width: 100vw;
+    min-height: 100vh;
+  } */
+}

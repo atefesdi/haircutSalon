@@ -1,0 +1,113 @@
+.header__style {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 13px;
+  color: #777777;
+}
+
+.header__style div {
+  width: 80%;
+  height: 1px;
+  background: #3333;
+  position: absolute;
+}
+
+.header__style span {
+  background: #fff;
+  z-index: 3;
+  padding: 3px;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.container div {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+  margin: 4px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.avalableTime__style {
+  background: rgb(197, 239, 180);
+  border: 2px solid rgb(197, 239, 180);
+}
+
+.unavailableTime__style {
+  background: rgb(239, 211, 211);
+  border: 2px solid rgb(239, 211, 211);
+  cursor: not-allowed !important;
+}
+
+.unavailableTime__style span {
+  color: #4d2b2b !important;
+}
+
+.avalableTime__style:hover {
+  border: 2px solid rgb(92, 201, 48);
+}
+
+.selectedStyle {
+  background: #4b64e8 !important;
+  border: 1px solid #4b64e8 !important;
+  color: #fff;
+}
+
+.selectedStyle span {
+  color: #fff;
+}
+
+.tickCircul {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #4b64e8;
+}
+
+.tickCircul::before {
+  content: "";
+  position: absolute;
+  transform: translate(-4px, 7.6px) rotate(45deg);
+  width: 3.9px;
+  height: 1.3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.tickCircul::after {
+  content: "";
+  position: absolute;
+  transform: translate(-2.6px, 6.4px) rotate(-45deg);
+  width: 7.7px;
+  height: 1.3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.startDate__style {
+  color: #505050;
+  padding-right: 4px;
+}
+
+.endDate__style {
+  color: #989898;
+  padding-left: 4px;
+}
+
+.selectedDate__style {
+  color: #4b64e8;
+  font-weight: 600;
+}

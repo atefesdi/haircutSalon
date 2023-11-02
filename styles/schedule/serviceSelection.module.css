@@ -1,0 +1,39 @@
+.container {
+  width: 420px;
+  padding: 15px;
+}
+
+.container p {
+  color: #1f222b7e;
+  font-size: 14px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.cartContainer {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid #e5e7ee;
+  color: #1f222b;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.cartContainer:hover {
+  border-color: #4b64e8;
+  cursor: pointer;
+}
+
+@media (max-width: 409px) {
+  .container {
+    width: 110%;
+  }
+
+  .cartContainer {
+    font-size: 14px;
+    height: 45px;
+  }
+}
