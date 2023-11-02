@@ -60,7 +60,7 @@
   opacity: 1;
 }
 
-@media (max-width: 409px) {
+@media (max-width: 415px) {
   .mainContainer {
     width: 100vw;
     min-height: 100vh;
