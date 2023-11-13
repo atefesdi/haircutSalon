@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@next/font": "13.4.10",
+    "@sweetalert2/theme-bootstrap-4": "^5.0.15",
     "date-fns": "^2.30.0",
     "next": "13.4.10",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sweetalert2": "^11.9.0",
+    "sweetalert2-react-content": "^5.0.7"
   }
 }

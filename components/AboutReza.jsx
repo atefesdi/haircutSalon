@@ -35,9 +35,8 @@ const AboutReza = () => {
             favoriet bij veel klanten van Kapperbeurs.
           </p>
         </div>
-        <div>
-          <Image src={reza_img} alt="image" className={styles.reza_img} />
-        </div>
+
+        <Image src={reza_img} alt="image" className={styles.reza_img} />
       </div>
     </div>
   )

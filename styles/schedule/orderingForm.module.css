@@ -13,6 +13,10 @@
   border-radius: 5px;
 }
 
+.invalid_form {
+  border: 1px dashed #b72121 !important;
+}
+
 .container input {
   height: 35px;
   padding: 5px;
