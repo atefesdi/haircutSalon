@@ -93,4 +93,18 @@
     width: 100%;
     margin-top: 10px;
   }
+
+  .icon__style {
+    width: 20px;
+    margin: 4px;
+  }
+
+  .icon__container li h3 {
+    font-weight: 500;
+    font-size: 9px;
+  }
+
+  .icon__container li p {
+    font-size: 8px;
+  }
 }
