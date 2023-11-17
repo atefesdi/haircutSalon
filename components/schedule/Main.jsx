@@ -43,6 +43,17 @@ const Main = ({ setOpenCalender }) => {
             {counterSlide === 2 && "Date Time Selection"}
             {counterSlide === 3 && "Customer Information"}
           </span>
+          <div className={styles.circleCarts__container}>
+            <span
+              className={counterSlide === 1 ? styles.currentCircle : ""}
+            ></span>
+            <span
+              className={counterSlide === 2 ? styles.currentCircle : ""}
+            ></span>
+            <span
+              className={counterSlide === 3 ? styles.currentCircle : ""}
+            ></span>
+          </div>
         </header>
 
         {counterSlide === 1 && (

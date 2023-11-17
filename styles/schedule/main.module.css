@@ -60,6 +60,26 @@
   opacity: 1;
 }
 
+.circleCarts__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleCarts__container span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #4b64e8;
+  border-radius: 50%;
+  margin: 13px 5px 5px 5px;
+}
+
+.currentCircle {
+  background: #4b64e8;
+}
+
 @media (max-width: 415px) {
   .mainContainer {
     width: 100vw;
