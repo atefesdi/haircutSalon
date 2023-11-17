@@ -8,6 +8,8 @@ import Main from "./schedule/Main"
 const Hero = ({ openCalender, setOpenCalender }) => {
   const openCalenderHandler = () => {
     setOpenCalender(!openCalender)
+    window.scrollTo(0, 0)
+    console.log("object :>> ")
   }
 
   return (
