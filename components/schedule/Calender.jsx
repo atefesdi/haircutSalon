@@ -67,7 +67,11 @@ const Calender = ({ previesSlideHandler, nextSlideHandler }) => {
     const weekDays = []
 
     for (let day = 0; day < 7; day++) {
-      weekDays.push(<div>{format(addDays(weekStartDate, day), "E")}</div>)
+      weekDays.push(
+        <div key={Math.random().toString()}>
+          {format(addDays(weekStartDate, day), "E")}
+        </div>
+      )
     }
     return <div className={styles.weekContainer}>{weekDays}</div>
   }
@@ -85,6 +89,7 @@ const Calender = ({ previesSlideHandler, nextSlideHandler }) => {
 
       week.push(
         <div
+          key={Math.random().toString()}
           className={`${
             isSameDay(currentDate, selectedDate)
               ? styles.selectedStyle
@@ -92,20 +97,26 @@ const Calender = ({ previesSlideHandler, nextSlideHandler }) => {
               ? styles.inactiveDay
               : ""
           }
-         ${isInThisMonth ? "" : styles.dayOfAnotheMonth} 
-         ${isInThisMonth && !isPastDay ? styles.activeDay : ""}`}
+           ${isInThisMonth ? "" : styles.dayOfAnotheMonth}
+           ${isInThisMonth && !isPastDay ? styles.activeDay : ""}`}
           onClick={() => handleDayClick(cloneDate, isPastDay, isInThisMonth)}
         >
           {isSameDay(currentDate, selectedDate) && (
-            <span className={styles.tickCircul}></span>
+            <span
+              key={Math.random().toString()}
+              className={styles.tickCircul}
+            ></span>
           )}
           {format(currentDate, "d")}
         </div>
       )
+
       currentDate = addDays(currentDate, 1)
     }
-    console.log("week :>> ", week)
-    return <>{week}</>
+
+    return week.map((item, index) => {
+      return item
+    })
   }
 
   const getDates = () => {
@@ -128,6 +139,12 @@ const Calender = ({ previesSlideHandler, nextSlideHandler }) => {
     return <div className={styles.dayContainer}>{allWeeks}</div>
   }
 
+  const submitHandler = () => {
+    if (selectedTime) {
+      nextSlideHandler()
+    }
+  }
+
   return (
     <section className={styles.container}>
       {getHeader()}
@@ -148,8 +165,8 @@ const Calender = ({ previesSlideHandler, nextSlideHandler }) => {
 
         {selectedDate && (
           <button
-            onClick={nextSlideHandler}
-            className={!selectedTime && styles.unavailable__nextBtn}
+            onClick={submitHandler}
+            className={!selectedTime ? styles.unavailable__nextBtn : ""}
           >
             Next
           </button>

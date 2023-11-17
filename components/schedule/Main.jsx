@@ -16,6 +16,7 @@ const Main = ({ setOpenCalender }) => {
   const nextSlideHandler = () => {
     if (counterSlide >= 1) {
       setCounteSlide(counterSlide + 1)
+      window.scrollTo(0, 0)
     }
   }
 

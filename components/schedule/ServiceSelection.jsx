@@ -13,7 +13,11 @@ const ServiceSelection = ({ nextSlideHandler }) => {
         Please select a service for which you want to schedule an appointment
       </p>
       {seviceName.map((item, index) => (
-        <div className={styles.cartContainer} onClick={selectServiceHandler}>
+        <div
+          key={index}
+          className={styles.cartContainer}
+          onClick={selectServiceHandler}
+        >
           <div>{item.name}</div>
           <div>{item.price}</div>
         </div>

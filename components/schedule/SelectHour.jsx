@@ -52,19 +52,17 @@ const SelectHour = ({ selectedDate, selectedTime, setSelectedTime }) => {
         {allHours.map((item, index) => (
           <div
             key={index}
-            onClick={onSelectTimeHandlet.bind(this, index, item.avalible)}
-            className={`${index === selectedTime ? styles.selectedStyle : ""}
-            ${
+            onClick={() => onSelectTimeHandlet(index, item.avalible)}
+            className={`${index === selectedTime ? styles.selectedStyle : ""} ${
               item.avalible
                 ? styles.avalableTime__style
                 : styles.unavailableTime__style
-            }
-            `}
+            }`}
           >
             {index === selectedTime && (
               <span className={styles.tickCircul}></span>
             )}
-            <span className={styles.startDate__style}>{item.startTime}</span>-
+            <span className={styles.startDate__style}>{item.startTime}</span>
             <span className={styles.endDate__style}>{item.endTime}</span>
           </div>
         ))}

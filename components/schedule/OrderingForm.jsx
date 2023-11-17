@@ -27,6 +27,10 @@ const OrderingForm = ({ onClosePopupHandler }) => {
     setValidationErrors({ ...validationErrors, [fieldRef]: false })
   }
 
+  const handleInputFocus = (ref, fieldRef) => {
+    console.log("object :>> ")
+  }
+
   const validateField = (field) => {
     const fieldValue = field.current.value
     const isValid =
@@ -60,6 +64,7 @@ const OrderingForm = ({ onClosePopupHandler }) => {
         placeholder="Name"
         ref={nameRef}
         onChange={() => handleInputChange(nameRef, "name")}
+        onFocus={() => handleInputFocus(nameRef, "name")}
         style={{ border: validationErrors.name ? "1px solid red" : "" }}
         required
       />
