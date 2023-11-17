@@ -6,6 +6,7 @@ import AboutDays from "@/components/AboutDays"
 import AboutReza from "@/components/AboutReza"
 import { useState } from "react"
 import Main from "@/components/schedule/Main"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   const [openCalender, setOpenCalender] = useState(false)
@@ -19,6 +20,7 @@ export default function Home() {
         <Menu />
         <AboutDays />
         <AboutReza />
+        <Footer />
       </main>
     </>
   )
